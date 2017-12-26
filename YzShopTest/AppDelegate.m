@@ -5,7 +5,7 @@
 //  Created by a1 on 2017/12/26.
 //  Copyright © 2017年 Jack. All rights reserved.
 //
-
+#import "ViewController.h"
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -16,6 +16,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    [self.window makeKeyAndVisible];
+    
+    ViewController *vc = [ViewController new];
+    
+    UINavigationController *Navc = [[UINavigationController alloc]initWithRootViewController:vc];
+
+    self.window.rootViewController = Navc;
     // Override point for customization after application launch.
     return YES;
 }
